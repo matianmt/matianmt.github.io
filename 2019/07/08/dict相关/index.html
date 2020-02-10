@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="dict的key可以为任何不可变类型，是可以是元组的 区分list和dir: k in d 查找的是key不是value，但是对于list, k in l查找的不是索引，是值。 字典格式化字符串： “%(key)s” % dict dict 方法：dict.fromkeys([‘name’, ‘age’],’unknown’)dict中如果没有键值’name’,get(‘name’)不会报错，会">
+    <meta name="description" content="dict的key可以为任何不可变类型，是可以是元组的  区分list和dir: k in d 查找的是key不是value，但是对于list, k in l查找的不是索引，是值。  字典格式化字符串： “%(key)s” % dict  dict 方法：dict.fromkeys([‘name’, ‘age’],’unknown’)dict中如果没有键值’name’,get(‘name’)不会报">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dict相关">
 <meta property="og:url" content="http://matianmt.github.io/2019/07/08/dict相关/index.html">
 <meta property="og:site_name" content="mat&#39;s blog">
-<meta property="og:description" content="dict的key可以为任何不可变类型，是可以是元组的 区分list和dir: k in d 查找的是key不是value，但是对于list, k in l查找的不是索引，是值。 字典格式化字符串： “%(key)s” % dict dict 方法：dict.fromkeys([‘name’, ‘age’],’unknown’)dict中如果没有键值’name’,get(‘name’)不会报错，会">
+<meta property="og:description" content="dict的key可以为任何不可变类型，是可以是元组的  区分list和dir: k in d 查找的是key不是value，但是对于list, k in l查找的不是索引，是值。  字典格式化字符串： “%(key)s” % dict  dict 方法：dict.fromkeys([‘name’, ‘age’],’unknown’)dict中如果没有键值’name’,get(‘name’)不会报">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-08T14:28:46.038Z">
+<meta property="og:updated_time" content="2019-07-09T02:02:17.052Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dict相关">
-<meta name="twitter:description" content="dict的key可以为任何不可变类型，是可以是元组的 区分list和dir: k in d 查找的是key不是value，但是对于list, k in l查找的不是索引，是值。 字典格式化字符串： “%(key)s” % dict dict 方法：dict.fromkeys([‘name’, ‘age’],’unknown’)dict中如果没有键值’name’,get(‘name’)不会报错，会">
+<meta name="twitter:description" content="dict的key可以为任何不可变类型，是可以是元组的  区分list和dir: k in d 查找的是key不是value，但是对于list, k in l查找的不是索引，是值。  字典格式化字符串： “%(key)s” % dict  dict 方法：dict.fromkeys([‘name’, ‘age’],’unknown’)dict中如果没有键值’name’,get(‘name’)不会报">
     
     
         
@@ -133,11 +133,16 @@
 
   <div class="content" itemprop="articleBody">
     <ol>
-<li>dict的key可以为任何不可变类型，是可以是元组的</li>
-<li>区分list和dir: k in d 查找的是key不是value，<br>但是对于list, k in l查找的不是索引，是值。</li>
-<li>字典格式化字符串： “%(key)s” % dict</li>
-<li>dict 方法：<br>dict.fromkeys([‘name’, ‘age’],’unknown’)<br>dict中如果没有键值’name’,get(‘name’)不会报错，会返回一个None；get(‘name’, ‘N/A’),定义不存在键值时返回设置的默认值，存在时返回对应的值</li>
-<li>python3中dict.keys(),dict.values(),dic.items()都返回的不是列表了，而是dict_xx类型的数据，需要用list/tuple<br>转换数据类型</li>
+<li><p>dict的key可以为任何不可变类型，是可以是元组的</p>
+</li>
+<li><p>区分list和dir: k in d 查找的是key不是value，<br>但是对于list, k in l查找的不是索引，是值。</p>
+</li>
+<li><p>字典格式化字符串： “%(key)s” % dict</p>
+</li>
+<li><p>dict 方法：<br>dict.fromkeys([‘name’, ‘age’],’unknown’)<br>dict中如果没有键值’name’,get(‘name’)不会报错，会返回<br>一个None；get(‘name’, ‘N/<br>A’),定义不存在键值时返回设置的默认值，存在时返回对应的值。而setdefault(‘name’,’N/A’)还会在字典中创建没有’name’键，并且对应的值为N/A</p>
+</li>
+<li><p>python3中dict.keys(),dict.values(),dic.items()都返回的不是列表了，而是dict_xx类型的数据，需要用list/tuple<br>转换数据类型；注意values返回的dict列表中可以包含重复的元素</p>
+</li>
 </ol>
 
   </div>
@@ -199,7 +204,7 @@
     
     <footer id="footer">
   <div class="footer-left">
-    Copyright &copy; 2019 mat
+    Copyright &copy; 2020 mat
   </div>
   <div class="footer-right">
     <nav>
